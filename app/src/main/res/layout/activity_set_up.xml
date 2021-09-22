@@ -10,7 +10,7 @@
     <ImageView
         android:background="@color/pink_1"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="@dimen/_190sdp"
         android:src="@drawable/ic_girl" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +39,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_cycle"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/btn_background"
         android:layout_width="match_parent"
@@ -63,9 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:text="Cyrcle length" />
+            android:text="Period length" />
     </LinearLayout>
         <Button
+            android:id="@+id/btn_period"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/btn_background"
             android:layout_width="match_parent"
@@ -80,8 +82,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
             android:src="@drawable/ic_last" />
 
         <TextView
@@ -92,6 +94,7 @@
             android:text="When did your last period start?" />
     </LinearLayout>
         <Button
+            android:id="@+id/btn_period_start"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/btn_background"
             android:layout_width="match_parent"
