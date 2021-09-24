@@ -1,11 +1,43 @@
 package com.poly.mycalendar.model;
+import android.print.PageRange;
+
 import static com.poly.mycalendar.GloabalUtils.toDay;
 
 public class DataUser {
-    private int cycle=28;
-    private int period=5;
-    private int dayStart = toDay;
+    private int id;
+    private int cycle;
+
+    public String getDayStart() {
+        return dayStart;
+    }
+
+    public void setDayStart(String dayStart) {
+        this.dayStart = dayStart;
+    }
+
+    private int period;
+    private String dayStart ;
     private int yearOfBirth;
+
+    public DataUser(int id, int cycle, int period, String dayStart, int yearOfBirth) {
+        this.id = id;
+        this.cycle = cycle;
+        this.period = period;
+        this.dayStart = dayStart;
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public DataUser() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
 
 
@@ -25,13 +57,6 @@ public class DataUser {
         this.period = period;
     }
 
-    public int getDayStart() {
-        return dayStart;
-    }
-
-    public void setDayStart(int dayStart) {
-        this.dayStart = dayStart;
-    }
 
     public int getYearOfBirth() {
         return yearOfBirth;
@@ -41,11 +66,6 @@ public class DataUser {
         this.yearOfBirth = yearOfBirth;
     }
 
-    public DataUser(int cycle, int period, int dayStart, int yearOfBirth) {
-        this.cycle = cycle;
-        this.period = period;
-        this.dayStart = dayStart;
-        this.yearOfBirth = yearOfBirth;
-    }
+
 
 }

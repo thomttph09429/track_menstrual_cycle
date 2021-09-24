@@ -7,9 +7,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GloabalUtils {
-    public static int toDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
-    public static int monthCurrent = Calendar.getInstance().get(Calendar.MONTH);
-    public static int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
+    public static final int toDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+    public static final int monthCurrent = Calendar.getInstance().get(Calendar.MONTH);
+    public static final int yearCurrent = Calendar.getInstance().get(Calendar.YEAR);
 
     public static Date getDateFromDatePicker(DatePicker datePicker) {
         int day = datePicker.getDayOfMonth();

@@ -3,34 +3,44 @@ package com.poly.mycalendar.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.poly.mycalendar.GloabalUtils;
 import com.poly.mycalendar.R;
+import com.poly.mycalendar.data.DataUserDAO;
 import com.poly.mycalendar.fragment.CycleFragment;
 import com.poly.mycalendar.fragment.DaysFragment;
 import com.poly.mycalendar.fragment.PeriodFragment;
 import com.poly.mycalendar.fragment.YearOfBirthFragment;
+import com.poly.mycalendar.model.DataUser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.poly.mycalendar.GloabalUtils.monthCurrent;
 import static com.poly.mycalendar.GloabalUtils.toDay;
 import static com.poly.mycalendar.GloabalUtils.yearCurrent;
+import static com.poly.mycalendar.data.DataUserDAO.TABLE_NAME;
 
-public class SetUpActivity extends AppCompatActivity implements View.OnClickListener, CycleFragment.ItemClickListener, PeriodFragment.ItemClickListenerp, DaysFragment.ItemClickListenerd,YearOfBirthFragment.ItemClickListenery,DaysFragment.notRemember {
+public class SetUpActivity extends AppCompatActivity implements View.OnClickListener, CycleFragment.ItemClickListener, PeriodFragment.ItemClickListenerp, DaysFragment.ItemClickListenerd, YearOfBirthFragment.ItemClickListenery, DaysFragment.notRemember {
     BottomSheetBehavior sheetBehavior;
     private RelativeLayout cycleDialog;
     private Button btnPeriodStart, btnCycle, btnPeriod, btnYearOfBirth, btnNext;
-    private int cycle= 28;
+    private int cycle = 28;
     private int period = 5;
-    private int  dayChoose =toDay;
-    private int monthChoose =monthCurrent;
-    private  int yearChoose  =yearCurrent;
-    private  int yearOfBirthChoose=  1999;
-
+    private int dayChoose = toDay;
+    private int monthChoose = monthCurrent;
+    private int yearChoose = yearCurrent;
+    private int yearOfBirthChoose = 1999;
+    private DataUserDAO dataUserDAO;
+    private String dates="";
 
 
     @Override
@@ -39,6 +49,11 @@ public class SetUpActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_set_up);
         initViews();
         initActions();
+        if (dataUserDAO.checkAlreadyExist()){
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
     }
 
@@ -49,7 +64,7 @@ public class SetUpActivity extends AppCompatActivity implements View.OnClickList
         btnPeriod = findViewById(R.id.btn_period);
         btnPeriodStart = findViewById(R.id.btn_period_start);
         btnYearOfBirth = findViewById(R.id.btn_year_of_birth);
-        btnNext=findViewById(R.id.btn_next);
+        btnNext = findViewById(R.id.btn_next);
 
     }
 
@@ -59,6 +74,7 @@ public class SetUpActivity extends AppCompatActivity implements View.OnClickList
         btnPeriodStart.setOnClickListener(this);
         btnYearOfBirth.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        dataUserDAO = new DataUserDAO(this);
 
     }
 
@@ -99,11 +115,39 @@ public class SetUpActivity extends AppCompatActivity implements View.OnClickList
                 year.show(getSupportFragmentManager(), "year");
                 break;
             case R.id.btn_next:
-                Intent intent=new Intent(this,LoginActivity.class);
-                startActivity(intent);
+                String text1 = btnCycle.getText().toString();
+                String text2 = btnPeriod.getText().toString();
+                String text3 = btnPeriodStart.getText().toString();
+                String text4 = btnYearOfBirth.getText().toString();
+
+                if (!text1.equalsIgnoreCase("choose") && !text2.equalsIgnoreCase("choose") && !text3.equalsIgnoreCase("choose") && !text4.equalsIgnoreCase("choose")) {
+
+                    insertDataUser();
+                } else {
+                    Toast.makeText(this,"Please enter information!", Toast.LENGTH_SHORT).show();
+
+                }
                 break;
+
             default:
                 break;
+        }
+
+    }
+
+    private void insertDataUser() {
+        DataUser dataUser = new DataUser();
+        dataUser.setId(0);
+        dataUser.setCycle(cycle);
+        dataUser.setPeriod(period);
+        dataUser.setDayStart(dates);
+        dataUser.setYearOfBirth(yearOfBirthChoose);
+        long result = dataUserDAO.insert(dataUser);
+        if (result > 0) {
+
+            Intent intent = new Intent(this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
         }
 
     }
@@ -111,40 +155,46 @@ public class SetUpActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onItemClick(int number) {
         cycle = number;
+        btnCycle.setText(number + "");
 
     }
 
 
     @Override
     public void onItemClickp(int number) {
-        period=number;
+        period = number;
+        btnPeriod.setText(number + "");
 
     }
 
-
-
-    @Override
-    public void onItemClickd(int day, int month, int year) {
-        dayChoose= day;
-        monthChoose=month;
-        yearChoose=year;
-
-    }
 
     @Override
     public void onItemClicky(int yearOfBirth) {
-        yearOfBirthChoose=yearOfBirth;
+        yearOfBirthChoose = yearOfBirth;
+        btnYearOfBirth.setText(yearOfBirth + "");
 
     }
 
 
     @Override
     public void onItemClickr(String isChecked) {
-        if (isChecked.equals("Check")){
-            btnPeriodStart.setText("I am not sure");
-        }else {
-            btnPeriodStart.setText("Choose");
-        }
+        btnPeriodStart.setText("I am not sure");
+
+
+
+
+    }
+
+    @Override
+    public void onItemClickd(int day, int month, int year, String date) {
+
+        dayChoose = day;
+        monthChoose = month;
+        yearChoose = year;
+        dates=date;
+        btnPeriodStart.setText(date);
+
+
 
     }
 }

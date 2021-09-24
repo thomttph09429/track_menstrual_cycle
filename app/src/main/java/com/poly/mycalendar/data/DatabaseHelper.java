@@ -13,13 +13,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(FavoriteDAO.CREATE_TABLE_VEHICLE);
+        db.execSQL(DataUserDAO.CREATE_TABLE_USERDATA);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("Drop table if exists " + FavoriteDAO.TABLE_NAME);
+        db.execSQL("Drop table if exists " + DataUserDAO.TABLE_NAME);
 
     }
 }

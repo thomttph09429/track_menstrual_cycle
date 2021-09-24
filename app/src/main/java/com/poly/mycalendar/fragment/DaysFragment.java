@@ -28,6 +28,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import static com.poly.mycalendar.GloabalUtils.getDate;
+import static com.poly.mycalendar.GloabalUtils.monthCurrent;
+import static com.poly.mycalendar.GloabalUtils.toDay;
+import static com.poly.mycalendar.GloabalUtils.yearCurrent;
 
 
 public class DaysFragment extends BottomSheetDialogFragment {
@@ -38,8 +41,9 @@ public class DaysFragment extends BottomSheetDialogFragment {
     private CalendarView calendar;
     private DaysFragment.ItemClickListenerd mListener;
     private DaysFragment.notRemember mNotRemember;
+    private String date="";
 
-    private int day, month, year;
+    private int day, month,year;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -63,10 +67,13 @@ public class DaysFragment extends BottomSheetDialogFragment {
                 day = dayOfMonth;
                 month = months;
                 year = years;
+                date=getDate(years, months, dayOfMonth);
             });
+            date=getDate(year,month,day);
 
             btnChoose.setOnClickListener(v -> {
-                mListener.onItemClickd(day, month, year);
+
+                mListener.onItemClickd(day, month, year, date);
                 dismiss();
             });
             getValue();
@@ -143,7 +150,7 @@ public class DaysFragment extends BottomSheetDialogFragment {
     }
 
     public interface ItemClickListenerd {
-        void onItemClickd(int day, int month, int year);
+        void onItemClickd(int day, int month, int year, String date);
 
     }
     public interface notRemember {
