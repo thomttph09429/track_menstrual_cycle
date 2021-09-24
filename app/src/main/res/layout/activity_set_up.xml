@@ -8,98 +8,142 @@
     tools:context=".activity.SetUpActivity">
 
     <ImageView
-        android:background="@color/pink_1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_190sdp"
+        android:background="@color/pink_1"
         android:src="@drawable/ic_girl" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_margin="@dimen/_10sdp"
->
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/ic_lock" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:text="Cyrcle length" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_locks" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Cycle length" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_cycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/btn_background"
+            android:text="Choose"
+            android:textColor="@color/pink_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_calender" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="Period length" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/btn_background"
+            android:text="Choose"
+            android:textColor="@color/pink_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_last" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="When did your last period start?" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_period_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/btn_background"
+            android:text="Choose"
+            android:textColor="@color/pink_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_years" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:text="what year were you born?" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_year_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/btn_background"
+            android:text="Choose"
+            android:textColor="@color/pink_3" />
+
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_cycle"
+        android:id="@+id/btn_next"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/btn_background"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose"
-        android:textColor="@color/pink_3" />
-
-    <LinearLayout
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:src="@drawable/ic_calender" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:text="Period length" />
-    </LinearLayout>
-        <Button
-            android:id="@+id/btn_period"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/btn_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose"
-            android:textColor="@color/pink_3" />
-    <LinearLayout
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="@dimen/_18sdp"
-            android:layout_height="@dimen/_18sdp"
-            android:src="@drawable/ic_last" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:text="When did your last period start?" />
-    </LinearLayout>
-        <Button
-            android:id="@+id/btn_period_start"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/btn_background"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Choose"
-            android:textColor="@color/pink_3" />
-    </LinearLayout>
+        android:layout_marginLeft="@dimen/_210sdp"
+        android:background="@drawable/btn_background_circle"
+        android:text="Done"
+        android:textColor="@color/white"
+ />
 </LinearLayout>

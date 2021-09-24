@@ -22,7 +22,10 @@
     <color name="black_3">#333333</color>
     <color name="black_4">#444444</color>
     <color name="black_5">#555555</color>
+    <color name="red">#DF2C2C</color>
     <color name="pink_1">#F3D7E0</color>
     <color name="pink_2">#F48DC3</color>
     <color name="pink_3">#F870B7</color>
+    <color name="pink_4">#ED4493</color>
+
 </resources>
