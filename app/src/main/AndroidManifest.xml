@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCalendar">
-        <activity android:name=".activity.HomeActivity"></activity>
+        <activity android:name=".activity.SymptomActivity"></activity>
+        <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.SetUpActivity" />
         <activity android:name=".MainActivity" />
+
         <activity
             android:name=".IntroActivity"
             android:theme="@style/FullscreenTheme">
@@ -22,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

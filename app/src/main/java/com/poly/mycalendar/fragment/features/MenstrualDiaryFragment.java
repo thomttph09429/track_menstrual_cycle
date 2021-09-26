@@ -35,6 +35,8 @@ public class MenstrualDiaryFragment extends Fragment {
     int periodLength = 0;
     private String dayStart = "";
     private int getDay;
+    private int getMonth;
+    private int getYear;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,11 @@ public class MenstrualDiaryFragment extends Fragment {
         cycleLength = dataUserDAO.getCycle();
         periodLength = dataUserDAO.getPeriod();
         dayStart = dataUserDAO.getDayStart();
-        getDay = Integer.parseInt(dayStart.substring(8, 9));
+        getDay = Integer.parseInt(dayStart.substring(8, 10));
+        Log.e("ngay do la", getDay + "");
+        getMonth = Integer.parseInt(dayStart.substring(5, 7));
+        getYear = Integer.parseInt(dayStart.substring(0, 4));
+
     }
 
     private void initViews() {
@@ -74,16 +80,39 @@ public class MenstrualDiaryFragment extends Fragment {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(2);
         calendar.deactivateDates(list);
+        String dateInString = dayStart;
 
 
         ArrayList<Date> arrayList = new ArrayList<>();
-        try {
-            SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
-            String date = "";
 
-            for (int i = getDay; i < periodLength; i++) {
-                date = "2021/9/" + i;
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
+
+
+        Calendar c = Calendar.getInstance();
+        try {
+            c.setTime(dateformat.parse(dateInString));
+            c.add(Calendar.DATE, cycleLength);
+
+            java.sql.Date resultdate = new java.sql.Date(c.getTimeInMillis());
+            dateInString = dateformat.format(resultdate);
+
+          for (int j=getMonth;j<12;j++){
+
+
+
+          }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            String date = "";
+            for (int i = getDay; i < getDay + periodLength; i++) {
+                date = yearCurrent + "/" + getMonth + "/" + i;
                 Date newdate2 = dateformat.parse(date);
+
+
                 arrayList.add(newdate2);
 
 

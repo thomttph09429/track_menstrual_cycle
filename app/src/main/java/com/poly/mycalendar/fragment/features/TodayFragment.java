@@ -1,5 +1,6 @@
 package com.poly.mycalendar.fragment.features;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 import com.poly.mycalendar.R;
@@ -37,7 +39,7 @@ public class TodayFragment extends Fragment {
     int cycleLength = 0;
     int periodLength = 0;
     String dayStart = "";
-    private TextView tvTimeLeft, tvdayStart;
+    private TextView tvTimeLeft, tvdayStart, tvChangeDayStart;
 
 
     @Override
@@ -53,16 +55,28 @@ public class TodayFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_today, container, false);
             initViews();
             initComponent();
+            tvChangeDayStart.setOnClickListener(v -> {
+                setDate(view);
+            });
 
         }
         return view;
     }
 
+    public void setDate(View v) {
+
+        DatePickerDialog dpd = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthofyear, int dayofmonth) {
+            }
+        }, yearCurrent, monthCurrent, toDay);
+        dpd.show();
+    }
     private void initViews() {
         calendarView = view.findViewById(R.id.calendar);
         tvTimeLeft = view.findViewById(R.id.tv_time_left);
         tvdayStart = view.findViewById(R.id.tv_start_day);
-
+        tvChangeDayStart = view.findViewById(R.id.tv_change_day_start);
     }
 
     private void initComponent() {
@@ -73,9 +87,6 @@ public class TodayFragment extends Fragment {
         periodLength = dataUserDAO.getPeriod();
         dayStart = dataUserDAO.getDayStart();
         String dateInString = dayStart;
-//        DateFormat df = new SimpleDateFormat("EEE, d MMM yyyy, HH:mm");
-//        String date = df.format(Calendar.getInstance().getTime());
-//        Log.e("thoi gian hien tai", date+"");
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
