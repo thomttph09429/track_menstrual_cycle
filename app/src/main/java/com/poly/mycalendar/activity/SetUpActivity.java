@@ -3,7 +3,6 @@ package com.poly.mycalendar.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.poly.mycalendar.GloabalUtils;
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.data.DataUserDAO;
 import com.poly.mycalendar.fragment.CycleFragment;
@@ -21,13 +19,9 @@ import com.poly.mycalendar.fragment.PeriodFragment;
 import com.poly.mycalendar.fragment.YearOfBirthFragment;
 import com.poly.mycalendar.model.DataUser;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.poly.mycalendar.GloabalUtils.monthCurrent;
-import static com.poly.mycalendar.GloabalUtils.toDay;
-import static com.poly.mycalendar.GloabalUtils.yearCurrent;
-import static com.poly.mycalendar.data.DataUserDAO.TABLE_NAME;
+import static com.poly.mycalendar.utils.GloabalUtils.monthCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.toDay;
+import static com.poly.mycalendar.utils.GloabalUtils.yearCurrent;
 
 public class SetUpActivity extends AppCompatActivity implements View.OnClickListener, CycleFragment.ItemClickListener, PeriodFragment.ItemClickListenerp, DaysFragment.ItemClickListenerd, YearOfBirthFragment.ItemClickListenery, DaysFragment.notRemember {
     BottomSheetBehavior sheetBehavior;

@@ -1,4 +1,4 @@
-package com.poly.mycalendar;
+package com.poly.mycalendar.utils;
 
 import android.widget.DatePicker;
 

@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,22 +14,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.CheckBox;
-import android.widget.NumberPicker;
-import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.poly.mycalendar.GloabalUtils;
 import com.poly.mycalendar.R;
 
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import static com.poly.mycalendar.GloabalUtils.getDate;
-import static com.poly.mycalendar.GloabalUtils.monthCurrent;
-import static com.poly.mycalendar.GloabalUtils.toDay;
-import static com.poly.mycalendar.GloabalUtils.yearCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.getDate;
 
 
 public class DaysFragment extends BottomSheetDialogFragment {

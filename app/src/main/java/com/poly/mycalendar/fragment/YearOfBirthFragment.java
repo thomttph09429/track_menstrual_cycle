@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +12,9 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.poly.mycalendar.GloabalUtils;
 import com.poly.mycalendar.R;
 
-import java.util.Calendar;
-
-import static com.poly.mycalendar.GloabalUtils.yearCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.yearCurrent;
 
 
 public class YearOfBirthFragment extends BottomSheetDialogFragment {

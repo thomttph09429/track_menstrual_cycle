@@ -1,7 +1,4 @@
 package com.poly.mycalendar.model;
-import android.print.PageRange;
-
-import static com.poly.mycalendar.GloabalUtils.toDay;
 
 public class DataUser {
     private int id;

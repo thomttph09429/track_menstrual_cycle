@@ -15,22 +15,18 @@ import android.widget.TextView;
 
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.data.DataUserDAO;
-import com.poly.mycalendar.model.DataUser;
 
 import java.sql.Date;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import com.poly.mycalendar.GloabalUtils;
+import com.poly.mycalendar.utils.GloabalUtils;
 
-import static com.poly.mycalendar.GloabalUtils.monthCurrent;
-import static com.poly.mycalendar.GloabalUtils.toDay;
-import static com.poly.mycalendar.GloabalUtils.yearCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.monthCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.toDay;
+import static com.poly.mycalendar.utils.GloabalUtils.yearCurrent;
 
 public class TodayFragment extends Fragment {
     private View view;
