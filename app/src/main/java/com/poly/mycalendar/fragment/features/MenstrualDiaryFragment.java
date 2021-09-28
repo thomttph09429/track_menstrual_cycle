@@ -111,15 +111,16 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
 
         int step = 0;
         for (int i = 0; i < 365; i++) {
-            long dates = c.getTimeInMillis();
+            long date= c.getTimeInMillis();
             int status = CalendarItem.DEFAULT;
             if (step < red)
                 status = CalendarItem.RED;
-            arr.add(new CalendarItem(status, dates));
+            arr.add(new CalendarItem(status, date, step == 0));
+
             step++;
-            if (step > count)
+            if (step >= count)
                 step = 0;
-            c.add(day, 1);
+            c.add(Calendar.DAY_OF_YEAR, 1);
         }
         CalendarAdapter calendarAdapter = new CalendarAdapter(daysInMonth, arr, this, getContext());
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 7);
