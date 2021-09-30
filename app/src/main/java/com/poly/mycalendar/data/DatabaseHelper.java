@@ -14,12 +14,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DataUserDAO.CREATE_TABLE_USERDATA);
+        db.execSQL(NoteDayDAO.CREATE_TABLE_NOTE);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("Drop table if exists " + DataUserDAO.TABLE_NAME);
+        db.execSQL("Drop table if exists " + NoteDayDAO.TABLE_NAME);
 
     }
 }

@@ -1,6 +1,7 @@
 package com.poly.mycalendar.adapter;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,11 +22,13 @@ public class CalendarViewHolder extends RecyclerView.ViewHolder implements View.
 
     public final TextView dayOfMonth;
     private final CalendarAdapter.OnItemListener onItemListener;
+    public  final ImageView ivNote;
 
     public CalendarViewHolder(@NonNull View itemView, CalendarAdapter.OnItemListener onItemListener, List<DayItem> days)
     {
         super(itemView);
         dayOfMonth = itemView.findViewById(R.id.cellDayText);
+        ivNote=itemView.findViewById(R.id.iv_isNote);
         this.onItemListener = onItemListener;
         itemView.setOnClickListener(this);
         this.days = days;

@@ -15,12 +15,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.activity.SymptomActivity;
 import com.poly.mycalendar.adapter.CalendarAdapter;
 import com.poly.mycalendar.data.DataUserDAO;
+import com.poly.mycalendar.listener.ClickNextMonth;
 import com.poly.mycalendar.model.DayItem;
 
 import java.sql.Date;
@@ -36,7 +38,7 @@ import java.util.List;
 import static com.poly.mycalendar.utils.GloabalUtils.selectedDate;
 
 
-public class MenstrualDiaryFragment extends Fragment implements View.OnClickListener, CalendarAdapter.OnItemListener {
+public class MenstrualDiaryFragment extends Fragment implements View.OnClickListener, CalendarAdapter.OnItemListener, ClickNextMonth {
     private View view;
     private DataUserDAO dataUserDAO;
     int cycleLength = 0;
@@ -49,6 +51,8 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
     private RecyclerView calendarRecyclerView;
     private Button btnPre, btnNext;
     private LinearLayout note;
+    private ClickNextMonth mClickNexMonth;
+    private LocalDate firstDayOfPeriod;
 
 
     @Override
@@ -116,7 +120,6 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
         int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
         YearMonth prevYearMonth = YearMonth.from(prevMonth);
         int prevDaysInMonth = prevYearMonth.lengthOfMonth();
-        int step = 0;
         for (int i = 1; i <= 42; i++) {
             if (i <= dayOfWeek || i > daysInMonth + dayOfWeek) {
                 dayItems.add(null);
@@ -124,6 +127,7 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
             } else {
                 String dateEnd = "";
                 int dayEnd = 0;
+                int status = DayItem.DEFAULT;
 
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 Calendar c = Calendar.getInstance();
@@ -138,38 +142,22 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+                boolean first = false;
+                int day = i - dayOfWeek;
+                if (getMonth == selectedDate.getMonthValue()) {
+                    for (int j = getDay; j < dayEnd; j++) {
+                        if (day == j) {
+                            status = DayItem.RED;
+                            Log.e("jjjjj", j + "");
+                        }
+                        if (day == getDay) {
+                            first = true;
+                            firstDayOfPeriod = LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), day);
+                        }
+                    }
+                }
+                dayItems.add(new DayItem(status, LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), day), first));
 
-
-                int status = DayItem.DEFAULT;
-
-
-//                int day = i + dayOfWeek;
-//
-//                if (getMonth == selectedDate.getMonthValue()) {
-//
-//                    for (int j = getDay; j <dayEnd;j++){
-//                        if (j == day)
-//                            status = DayItem.RED;
-//                        Log.e("ffff", j + "");
-//
-//                    }
-//
-//                }
-
-
-//                dayItems.add(new DayItem(status, LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), i - dayOfWeek), step == 0));
-//                step++;
-//                if (step >= cycleLength)
-//                    step = 0;
-
-
-                if (step < periodLength)
-                    status = DayItem.RED;
-
-                dayItems.add(new DayItem(status, LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), i - dayOfWeek), step == 0));
-                step++;
-                if (step >= cycleLength)
-                    step = 0;
 
             }
         }
@@ -179,6 +167,7 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private String monthYearFromDate(LocalDate date) {
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
         return date.format(formatter);
     }
@@ -187,12 +176,18 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
     public void previousMonthAction() {
         selectedDate = selectedDate.minusMonths(1);
         setMonthView();
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void nextMonthAction() {
         selectedDate = selectedDate.plusMonths(1);
         setMonthView();
+    }
+    @Override
+    public void nextCicle(LocalDate localDate) {
+        firstDayOfPeriod=localDate;
+
     }
 
 
@@ -237,6 +232,7 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
 
         }
     }
+
 
 
 }
