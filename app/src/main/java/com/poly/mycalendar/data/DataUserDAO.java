@@ -49,7 +49,7 @@ public class DataUserDAO {
         String query = new String( "select cycle from dataUser where ID = 1" );
         Cursor result = db.rawQuery( query, null );
 
-        int returnCycle = 0; // Your default if none is found
+        int returnCycle = 0;
 
         if(result.moveToFirst())
         {
@@ -64,7 +64,7 @@ public class DataUserDAO {
         String query = new String( "select period from dataUser where ID = 1" );
         Cursor result = db.rawQuery( query, null );
 
-        int returnPeriod = 0; // Your default if none is found
+        int returnPeriod = 0;
 
         if(result.moveToFirst())
         {
@@ -78,7 +78,7 @@ public class DataUserDAO {
         String query = new String( "select dayStart from dataUser where ID = 1" );
         Cursor result = db.rawQuery( query, null );
 
-        String returnsStart = ""; // Your default if none is found
+        String returnsStart = "";
 
         if(result.moveToFirst())
         {
@@ -92,7 +92,7 @@ public class DataUserDAO {
         String query = new String( "select yearOfBirth from dataUser where ID = 1" );
         Cursor result = db.rawQuery( query, null );
 
-        int returnsStart = 0; // Your default if none is found
+        int returnsStart = 0;
 
         if(result.moveToFirst())
         {

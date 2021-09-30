@@ -16,28 +16,11 @@ import androidx.annotation.RequiresApi;
 public class CustomView extends View {
     private Paint mPaint;
 
-    public CustomView(Context context) {
+    public CustomView (Context context) {
         super(context);
-        init(null);
-    }
-
-    public CustomView(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        init(attrs);
     }
 
 
-
-    public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(attrs);
-
-    }
-
-
-    private void init(@Nullable  AttributeSet attrs) {
-        mPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {

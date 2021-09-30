@@ -1,6 +1,6 @@
 package com.poly.mycalendar.fragment.features;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -14,28 +14,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.poly.mycalendar.R;
+import com.poly.mycalendar.activity.SymptomActivity;
 import com.poly.mycalendar.adapter.CalendarAdapter;
 import com.poly.mycalendar.data.DataUserDAO;
-import com.poly.mycalendar.model.CalendarItem;
-import com.poly.mycalendar.utils.CustomView;
-import com.poly.mycalendar.utils.GloabalUtils;
+import com.poly.mycalendar.model.DayItem;
 
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
-import static com.poly.mycalendar.utils.GloabalUtils.monthCurrent;
-import static com.poly.mycalendar.utils.GloabalUtils.toDay;
-import static com.poly.mycalendar.utils.GloabalUtils.yearCurrent;
+import static com.poly.mycalendar.utils.GloabalUtils.selectedDate;
 
 
-public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.OnItemListener, View.OnClickListener {
+public class MenstrualDiaryFragment extends Fragment implements View.OnClickListener, CalendarAdapter.OnItemListener {
     private View view;
     private DataUserDAO dataUserDAO;
     int cycleLength = 0;
@@ -46,8 +47,9 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
     private int getYear;
     private TextView monthYearText;
     private RecyclerView calendarRecyclerView;
-    private LocalDate selectedDate;
     private Button btnPre, btnNext;
+    private LinearLayout note;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,9 +67,6 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
             selectedDate = LocalDate.now();
             setMonthView();
 
-
-
-
         }
         return view;
     }
@@ -80,7 +79,7 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
         getDay = Integer.parseInt(dayStart.substring(8, 10));
         getMonth = Integer.parseInt(dayStart.substring(5, 7));
         getYear = Integer.parseInt(dayStart.substring(0, 4));
-
+        Log.e("day satr", dayStart + "");//2021-09-10
 
     }
 
@@ -89,70 +88,98 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
         monthYearText = view.findViewById(R.id.monthYearTV);
         btnPre = view.findViewById(R.id.btn_pre);
         btnNext = view.findViewById(R.id.btn_next);
+        note = view.findViewById(R.id.ln_note);
         btnPre.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        note.setOnClickListener(this);
 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setMonthView() {
         monthYearText.setText(monthYearFromDate(selectedDate));
-        ArrayList<String> daysInMonth = daysInMonthArray(selectedDate);
-         ArrayList<CalendarItem> arr=new ArrayList<>();
-
-        int count = cycleLength;
-        int red = periodLength;
-        Calendar c = Calendar.getInstance();
-        int day = getDay;
-        c.set(Calendar.DAY_OF_MONTH, getDay);
-        c.set(Calendar.MONTH, getMonth);
-        c.set(Calendar.YEAR, getYear);
-
-
-        int step = 0;
-        for (int i = 0; i < 365; i++) {
-            long date= c.getTimeInMillis();
-            int status = CalendarItem.DEFAULT;
-            if (step < red)
-                status = CalendarItem.RED;
-            arr.add(new CalendarItem(status, date, step == 0));
-
-            step++;
-            if (step >= count)
-                step = 0;
-            c.add(Calendar.DAY_OF_YEAR, 1);
-        }
-        CalendarAdapter calendarAdapter = new CalendarAdapter(daysInMonth, arr, this, getContext());
+        List<DayItem> dayItems = daysInMonthArray(selectedDate);
+        CalendarAdapter calendarAdapter = new CalendarAdapter(dayItems, getContext(), this);
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 7);
         calendarRecyclerView.setLayoutManager(layoutManager);
         calendarRecyclerView.setAdapter(calendarAdapter);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private ArrayList<String> daysInMonthArray(LocalDate date) {
-        ArrayList<String> daysInMonthArray = new ArrayList<>();
+    private List<DayItem> daysInMonthArray(LocalDate date) {
+        List<DayItem> dayItems = new ArrayList<>();
         YearMonth yearMonth = YearMonth.from(date);
-
         int daysInMonth = yearMonth.lengthOfMonth();
-
+        LocalDate prevMonth = selectedDate.minusMonths(1);
+        LocalDate nextMonth = selectedDate.plusMonths(1);
         LocalDate firstOfMonth = selectedDate.withDayOfMonth(1);
         int dayOfWeek = firstOfMonth.getDayOfWeek().getValue();
-
-
+        YearMonth prevYearMonth = YearMonth.from(prevMonth);
+        int prevDaysInMonth = prevYearMonth.lengthOfMonth();
+        int step = 0;
         for (int i = 1; i <= 42; i++) {
             if (i <= dayOfWeek || i > daysInMonth + dayOfWeek) {
-                daysInMonthArray.add("");
+                dayItems.add(null);
 
             } else {
-                daysInMonthArray.add(String.valueOf(i - dayOfWeek));
+                String dateEnd = "";
+                int dayEnd = 0;
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Calendar c = Calendar.getInstance();
+                try {
+                    c.setTime(sdf.parse(dayStart));
+                    c.add(Calendar.DATE, periodLength);
+                    Date resultdate = new Date(c.getTimeInMillis());
+                    dateEnd = sdf.format(resultdate);
+                    dayEnd = Integer.parseInt(dateEnd.substring(8, 10));
+
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+
+                int status = DayItem.DEFAULT;
+
+
+//                int day = i + dayOfWeek;
+//
+//                if (getMonth == selectedDate.getMonthValue()) {
+//
+//                    for (int j = getDay; j <dayEnd;j++){
+//                        if (j == day)
+//                            status = DayItem.RED;
+//                        Log.e("ffff", j + "");
+//
+//                    }
+//
+//                }
+
+
+//                dayItems.add(new DayItem(status, LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), i - dayOfWeek), step == 0));
+//                step++;
+//                if (step >= cycleLength)
+//                    step = 0;
+
+
+                if (step < periodLength)
+                    status = DayItem.RED;
+
+                dayItems.add(new DayItem(status, LocalDate.of(selectedDate.getYear(), selectedDate.getMonth(), i - dayOfWeek), step == 0));
+                step++;
+                if (step >= cycleLength)
+                    step = 0;
+
             }
         }
-        return daysInMonthArray;
+
+        return dayItems;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private String monthYearFromDate(LocalDate date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-yyyy");
         return date.format(formatter);
     }
 
@@ -168,14 +195,6 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
         setMonthView();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    @Override
-    public void onItemClick(int position, String dayText) {
-        if (!dayText.equals("")) {
-            String message = "Selected Date " + dayText + " " + monthYearFromDate(selectedDate);
-            Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
-        }
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -187,8 +206,37 @@ public class MenstrualDiaryFragment extends Fragment implements CalendarAdapter.
             case R.id.btn_next:
                 nextMonthAction();
                 break;
+            case R.id.ln_note:
+                noteAction();
+                break;
             default:
                 break;
         }
     }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void noteAction() {
+        Intent intent = new Intent(getContext(), SymptomActivity.class);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedString = selectedDate.format(formatter);
+        Log.e("ddkkkkkkkkk", formattedString + "");
+        intent.putExtra("date", formattedString);
+        getContext().startActivity(intent);
+
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    @Override
+    public void onItemClick(int position, DayItem date) {
+
+        if (date != null) {
+            LocalDate localDate = date.getDate();
+            selectedDate = localDate;
+            setMonthView();
+
+        }
+    }
+
+
 }

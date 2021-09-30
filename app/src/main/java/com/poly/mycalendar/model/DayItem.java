@@ -1,13 +1,21 @@
 package com.poly.mycalendar.model;
 
-public class CalendarItem {
+import java.time.LocalDate;
 
+public class DayItem {
     public static final int RED = 1;
     public static final int DEFAULT = 2;
-    public static final int GREEN = 3;
+    public static final int PASS = 3;
+    public DayItem(int status, LocalDate date, boolean fist) {
+        this.status = status;
+        this.date = date;
+        this.fist = fist;
+    }
 
     private int status;
+    private LocalDate date;
 
+    private boolean fist;
     public int getStatus() {
         return status;
     }
@@ -16,11 +24,11 @@ public class CalendarItem {
         this.status = status;
     }
 
-    public long getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(long date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -32,15 +40,11 @@ public class CalendarItem {
         this.fist = fist;
     }
 
-    private long date;
-
-    public CalendarItem(int status, long date, boolean fist) {
-        this.status = status;
+    public DayItem( LocalDate date) {
         this.date = date;
-        this.fist = fist;
     }
 
-    private boolean fist;
-
+    public DayItem() {
+    }
 
 }

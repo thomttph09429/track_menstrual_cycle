@@ -3,65 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:padding="@dimen/_10sdp"
+    android:orientation="vertical"
     tools:context=".activity.SymptomActivity">
-    <androidx.appcompat.widget.Toolbar
-        android:background="@color/pink_1"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pink_1" />
+        <TextView
+            android:id="@+id/tv_date"
+            android:text="2021_09_10"
+            android:textSize="@dimen/_17sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mood"
-        android:textSize="@dimen/_20sdp"
-        android:fontFamily="@font/arial_bold"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_mood"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Symptom"
-        android:textSize="@dimen/_20sdp"
-        android:fontFamily="@font/arial_bold"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_symptom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="vaginal discharge"
-        android:textSize="@dimen/_20sdp"
-        android:fontFamily="@font/arial_bold"
-        />
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_discharge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-    <View
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c0c0c0"/>
+        android:orientation="vertical"
+
+        >
+        <RelativeLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/arial_bold"
+                android:text="Mood"
+                android:textSize="@dimen/_20sdp" />
+            <ImageView
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/rv_mood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#c0c0c0" />
+
+        <RelativeLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial_bold"
+            android:text="Symptoms"
+            android:textSize="@dimen/_20sdp" />
+        <ImageView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/rv_symptom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#c0c0c0" />
+
+        <TextView
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial_bold"
+            android:text="vaginal discharge"
+            android:textSize="@dimen/_20sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/rv_discharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="#c0c0c0" />
+    </LinearLayout>
+
 
 </LinearLayout>
