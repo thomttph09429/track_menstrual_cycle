@@ -17,13 +17,16 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.activity.SymptomActivity;
 import com.poly.mycalendar.adapter.CalendarAdapter;
 import com.poly.mycalendar.data.DataUserDAO;
+import com.poly.mycalendar.data.NoteDayDAO;
 import com.poly.mycalendar.listener.ClickNextMonth;
 import com.poly.mycalendar.model.DayItem;
+import com.poly.mycalendar.utils.GloabalUtils;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -53,6 +56,8 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
     private LinearLayout note;
     private ClickNextMonth mClickNexMonth;
     private LocalDate firstDayOfPeriod;
+    private RelativeLayout editNote;
+    private NoteDayDAO noteDayDAO;
 
 
     @Override
@@ -93,11 +98,14 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
         btnPre = view.findViewById(R.id.btn_pre);
         btnNext = view.findViewById(R.id.btn_next);
         note = view.findViewById(R.id.ln_note);
+        editNote = view.findViewById(R.id.edt_note);
         btnPre.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         note.setOnClickListener(this);
+        noteDayDAO = new NoteDayDAO(getContext());
 
     }
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setMonthView() {
@@ -184,9 +192,10 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
         selectedDate = selectedDate.plusMonths(1);
         setMonthView();
     }
+
     @Override
     public void nextCicle(LocalDate localDate) {
-        firstDayOfPeriod=localDate;
+        firstDayOfPeriod = localDate;
 
     }
 
@@ -202,6 +211,9 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
                 nextMonthAction();
                 break;
             case R.id.ln_note:
+                noteAction();
+                break;
+            case R.id.edt_note:
                 noteAction();
                 break;
             default:
@@ -229,10 +241,22 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
             LocalDate localDate = date.getDate();
             selectedDate = localDate;
             setMonthView();
+            Log.e("ngay nhan", selectedDate + "");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyy-MM-dd");
+            String formattedString = selectedDate.format(formatter);
+            if (noteDayDAO.isNote(formattedString)) {
+                editNote.setVisibility(View.VISIBLE);
+                note.setVisibility(View.GONE);
+
+            } else {
+                editNote.setVisibility(View.GONE);
+                note.setVisibility(View.VISIBLE);
+
+            }
+
 
         }
     }
-
 
 
 }

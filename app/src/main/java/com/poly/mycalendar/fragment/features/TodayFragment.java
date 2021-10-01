@@ -37,7 +37,9 @@ public class TodayFragment extends Fragment {
     String dayStart = "";
     private TextView tvTimeLeft, tvdayStart, tvChangeDayStart;
 
-
+    private int getDay;
+    private int getMonth;
+    private int getYear;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +70,7 @@ public class TodayFragment extends Fragment {
         }, yearCurrent, monthCurrent, toDay);
         dpd.show();
     }
+
     private void initViews() {
         calendarView = view.findViewById(R.id.calendar);
         tvTimeLeft = view.findViewById(R.id.tv_time_left);
@@ -82,22 +85,29 @@ public class TodayFragment extends Fragment {
         dayStart = dataUserDAO.getDayStart();
         periodLength = dataUserDAO.getPeriod();
         dayStart = dataUserDAO.getDayStart();
+        getDay = Integer.parseInt(dayStart.substring(8, 10));
+        getMonth = Integer.parseInt(dayStart.substring(5, 7));
+        getYear = Integer.parseInt(dayStart.substring(0, 4));
         String dateInString = dayStart;
 
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Calendar c = Calendar.getInstance();
         try {
+            c.set(Calendar.MONTH,getMonth);
+            c.set(Calendar.YEAR,getYear);
+            c.set(Calendar.DAY_OF_MONTH,getDay);
+
             c.setTime(sdf.parse(dateInString));
             c.add(Calendar.DATE, cycleLength);
 
             Date resultdate = new Date(c.getTimeInMillis());
             dateInString = sdf.format(resultdate);
             tvdayStart.setText("Projected start date is " + dateInString + "");
-
+            Log.e("ngay tiep theo la", dateInString + "");
 
             String timeCurrent = GloabalUtils.getDate(yearCurrent, monthCurrent, toDay);
-            final SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+            final SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             java.util.Date startDate = null;
             java.util.Date endDate = null;
             try {

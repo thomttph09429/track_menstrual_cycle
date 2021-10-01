@@ -57,7 +57,7 @@ public class PeriodFragment extends BottomSheetDialogFragment {
     }
 
     private void getValue() {
-        pickPeriod.setMaxValue(20);
+        pickPeriod.setMaxValue(14);
         pickPeriod.setMinValue(1);
         pickPeriod.setWrapSelectorWheel(true);
         if (userChoose==defaultPeriod) {

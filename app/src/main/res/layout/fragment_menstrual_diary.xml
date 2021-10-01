@@ -243,5 +243,53 @@
             android:layout_height="@dimen/_30sdp"
             android:src="@drawable/ic_notes" />
     </LinearLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/edt_note"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:src="@drawable/ic_edit_small"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/tv_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:layout_toRightOf="@+id/iv_edit"
+            android:layout_marginLeft="@dimen/_20sdp"
+            />
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Edit"
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pink_4"
+            android:layout_toRightOf="@+id/tv_note"
+            android:layout_marginLeft="@dimen/_130sdp"
+
+            />
+        <ImageView
+            android:layout_toRightOf="@+id/edit"
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_right"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_alignParentRight="true"
+
+            />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>

@@ -54,37 +54,38 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.MoodViewHolder
 
 
 
-//
-            holder.itemView.setOnClickListener(v -> {
-                id = typeOfNote + dateNote + position + "";
 
-                if (holder.ivMark.getVisibility() == View.VISIBLE) {
-                    holder.ivMark.setVisibility(View.GONE);
-                    long result = noteDayDAO.deleteNote(id);
-                    if (result > 0) {
-                        Log.e("da xoa", result + "");
-                    } else {
 
-                    }
-                } else if (holder.ivMark.getVisibility() == View.GONE) {
+        holder.itemView.setOnClickListener(v -> {
+            id = typeOfNote + dateNote + position + "";
 
-                    holder.ivMark.setVisibility(View.VISIBLE);
+            if (holder.ivMark.getVisibility() == View.VISIBLE) {
+                holder.ivMark.setVisibility(View.GONE);
+                long result = noteDayDAO.deleteNote(id);
+                if (result > 0) {
+                    Log.e("da xoa", result + "");
+                } else {
 
-                    note.setId(id);
-                    note.setDateNote(dateNote);
-                    note.setTypeOfNote(typeOfNote);
-                    note.setPositionItem(position);
-                    long result = noteDayDAO.insert(note);
-                    if (result > 0) {
-                        Log.e("da them", id + "");
-
-                    } else {
-                        Log.e("that bai ", result + "");
-
-                    }
                 }
+            } else if (holder.ivMark.getVisibility() == View.GONE) {
 
-            });
+                holder.ivMark.setVisibility(View.VISIBLE);
+                String titles= mood.getTitle();
+
+                note.setId(id);
+                note.setDateNote(dateNote);
+                note.setTypeOfNote(typeOfNote);
+                note.setPositionItem(position);
+                long result = noteDayDAO.insert(note);
+                if (result > 0) {
+                    Log.e("da them", id + "");
+                } else {
+                    Log.e("that bai ", result + "");
+
+                }
+            }
+
+        });
 
 
     }

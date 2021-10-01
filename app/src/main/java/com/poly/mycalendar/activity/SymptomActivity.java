@@ -147,7 +147,7 @@ public class SymptomActivity extends AppCompatActivity implements View.OnClickLi
     }
     private void initActivity() {
         moods = new ArrayList<>();
-        moods.add(new Mood("Didn't exercise", R.drawable.didnt_exercise));
+        moods.add(new Mood("Did not exercise", R.drawable.didnt_exercise));
         moods.add(new Mood("Running", R.drawable.running));
         moods.add(new Mood("Cycling", R.drawable.cycling));
         moods.add(new Mood("Gym", R.drawable.gym));

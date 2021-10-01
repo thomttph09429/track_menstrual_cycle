@@ -5,15 +5,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.model.DayItem;
-import com.poly.mycalendar.utils.CustomView;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CalendarViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {

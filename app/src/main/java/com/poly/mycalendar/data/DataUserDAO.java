@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static android.os.Build.ID;
+
 
 public class DataUserDAO {
     public static final String TABLE_NAME = "dataUser";
@@ -21,12 +23,12 @@ public class DataUserDAO {
     public static final String CREATE_TABLE_USERDATA = "create table dataUser (id integer  primary key , cycle integer, period integer , dayStart text ,yearOfBirth integer)";
 
 
-    public  DataUserDAO(Context context) {
-       this. dbHelper = new DatabaseHelper(context);
+    public DataUserDAO(Context context) {
+        this.dbHelper = new DatabaseHelper(context);
         this.db = dbHelper.getWritableDatabase();
     }
 
-    public  long insert(DataUser dataUser) {
+    public long insert(DataUser dataUser) {
         ContentValues values = new ContentValues();
         values.put("cycle", dataUser.getCycle());
         values.put("period", dataUser.getPeriod());
@@ -46,13 +48,12 @@ public class DataUserDAO {
     }
 
     public int getCycle() {
-        String query = new String( "select cycle from dataUser where ID = 1" );
-        Cursor result = db.rawQuery( query, null );
+        String query = new String("select cycle from dataUser where ID = 1");
+        Cursor result = db.rawQuery(query, null);
 
         int returnCycle = 0;
 
-        if(result.moveToFirst())
-        {
+        if (result.moveToFirst()) {
             returnCycle = result.getInt(result.getColumnIndex("cycle"));
         }
         result.close();
@@ -60,42 +61,51 @@ public class DataUserDAO {
         return returnCycle;
     }
 
+    public boolean updatePeriod(int period) {
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + "period" + " =  " + period);
+        return true;
+
+    }
+    public boolean updateCycle(int cycle) {
+        db.execSQL("UPDATE " + TABLE_NAME + " SET " + "cycle" + " =  " + cycle);
+        return true;
+
+    }
     public int getPeriod() {
-        String query = new String( "select period from dataUser where ID = 1" );
-        Cursor result = db.rawQuery( query, null );
+        String query = new String("select period from dataUser where ID = 1");
+        Cursor result = db.rawQuery(query, null);
 
         int returnPeriod = 0;
 
-        if(result.moveToFirst())
-        {
+        if (result.moveToFirst()) {
             returnPeriod = result.getInt(result.getColumnIndex("period"));
         }
         result.close();
 
         return returnPeriod;
     }
+
     public String getDayStart() {
-        String query = new String( "select dayStart from dataUser where ID = 1" );
-        Cursor result = db.rawQuery( query, null );
+        String query = new String("select dayStart from dataUser where ID = 1");
+        Cursor result = db.rawQuery(query, null);
 
         String returnsStart = "";
 
-        if(result.moveToFirst())
-        {
+        if (result.moveToFirst()) {
             returnsStart = result.getString(result.getColumnIndex("dayStart"));
         }
         result.close();
 
         return returnsStart;
     }
+
     public int getYearOfBirth() {
-        String query = new String( "select yearOfBirth from dataUser where ID = 1" );
-        Cursor result = db.rawQuery( query, null );
+        String query = new String("select yearOfBirth from dataUser where ID = 1");
+        Cursor result = db.rawQuery(query, null);
 
         int returnsStart = 0;
 
-        if(result.moveToFirst())
-        {
+        if (result.moveToFirst()) {
             returnsStart = result.getInt(result.getColumnIndex("yearOfBirth"));
         }
         result.close();

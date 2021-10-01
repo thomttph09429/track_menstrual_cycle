@@ -6,6 +6,16 @@ public class Note {
     String typeOfNote;
     int positionItem;
 
+
+
+
+    public Note(String id, String dateNote, String typeOfNote, int positionItem) {
+        this.id = id;
+        this.dateNote = dateNote;
+        this.typeOfNote = typeOfNote;
+        this.positionItem = positionItem;
+    }
+
     public String getId() {
         return id;
     }
@@ -14,12 +24,7 @@ public class Note {
     public Note() {
     }
 
-    public Note(String id, String dateNote, String typeOfNote, int positionItem) {
-        this.id = id;
-        this.dateNote = dateNote;
-        this.typeOfNote = typeOfNote;
-        this.positionItem = positionItem;
-    }
+
 
     public void setId(String id) {
         this.id = id;
@@ -47,5 +52,8 @@ public class Note {
 
     public void setPositionItem(int positionItem) {
         this.positionItem = positionItem;
+    }
+
+    public void getTitle(String title) {
     }
 }

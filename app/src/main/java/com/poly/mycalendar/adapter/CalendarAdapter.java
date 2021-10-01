@@ -3,7 +3,6 @@ package com.poly.mycalendar.adapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.poly.mycalendar.R;
 import com.poly.mycalendar.data.NoteDayDAO;
 import com.poly.mycalendar.model.DayItem;
-import com.poly.mycalendar.model.Note;
 import com.poly.mycalendar.utils.GloabalUtils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
