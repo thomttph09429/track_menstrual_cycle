@@ -102,6 +102,7 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
         btnPre.setOnClickListener(this);
         btnNext.setOnClickListener(this);
         note.setOnClickListener(this);
+        editNote.setOnClickListener(this);
         noteDayDAO = new NoteDayDAO(getContext());
 
     }
@@ -216,6 +217,7 @@ public class MenstrualDiaryFragment extends Fragment implements View.OnClickList
             case R.id.edt_note:
                 noteAction();
                 break;
+
             default:
                 break;
         }

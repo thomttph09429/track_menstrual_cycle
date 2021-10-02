@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.TipsActivity"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/arial_bold"
+            android:text="Tips"
+            android:textSize="@dimen/_17sdp" />
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    >
+
+
+<LinearLayout
+    android:id="@+id/ln_tip1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/tip_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="@string/dot" />
+
+        <TextView
+            android:textColor="@color/color_text_tips"
+            android:textSize="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.3"
+            android:text="@string/tip_1" />
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_next_page" />
+    </LinearLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_content_1"
+        android:textColor="@color/black_5"
+        android:textSize="@dimen/_13sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:text="@string/content_tip_1"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_10sdp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/tab_indicator_gray"
+
+        />
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ln_tip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_2" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_2"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/content_tip_2"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_3" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_3"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/content_tip_3"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_4" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_4"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:text="@string/content_tip_4"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_5" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_5"
+            android:text="@string/content_tip_5"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_6" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_6"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:text="@string/content_tip_6"
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_7" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_7"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_8" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_8"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:text="@string/content_tip_8"
+
+            android:paddingRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_9" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_9"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_10" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_10"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_11" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_11"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_12" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_12"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ln_tip13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/tip_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="@string/dot" />
+
+            <TextView
+                android:textColor="@color/color_text_tips"
+                android:textSize="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:text="@string/tip_13" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/ic_next_page" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content_13"
+            android:textColor="@color/black_5"
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_25sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/content_tip_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/tab_indicator_gray"
+
+            />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

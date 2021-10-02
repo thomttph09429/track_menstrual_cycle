@@ -7,12 +7,12 @@
     android:orientation="vertical"
     tools:context=".activity.SetUpActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_190sdp"
-        android:background="@color/pink_1"
-   />
 
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_170sdp"
+    android:src="@drawable/vip_top_bg"
+    />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

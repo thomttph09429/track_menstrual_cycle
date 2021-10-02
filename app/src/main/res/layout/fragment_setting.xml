@@ -13,8 +13,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-      />
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/tv_date"
@@ -70,18 +69,27 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/tab_indicator_gray"
+
+        />
+
     <LinearLayout
         android:id="@+id/edit_period_length"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4">
 
         <ImageView
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
             android:layout_weight="0.5"
             android:src="@drawable/ic_mc_length" />
 
@@ -102,54 +110,48 @@
     </LinearLayout>
 
 
-<LinearLayout
-    android:visibility="gone"
-    android:id="@+id/choose_period_length"
-    android:padding="@dimen/_10sdp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="4"
-    android:orientation="horizontal">
-    <Button
-        android:id="@+id/btn_period_cancel"
-        android:background="@drawable/btn_save_and_cancel"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_weight="0.5"
-        android:text="Cancel"
-        android:textSize="@dimen/_10sdp"
-        android:layout_width="@dimen/_50sdp"
-        android:textAllCaps="false"
-        android:layout_height="@dimen/_30sdp"
-        />
-    <NumberPicker
-        android:layout_weight="3"
-        android:id="@+id/picker_period"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-
-        />
-    <Button
-        android:id="@+id/btn_period_save"
-        android:layout_weight="0.5"
-        android:textAllCaps="false"
-        android:text="Save"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:background="@drawable/btn_save_and_cancel"
-        android:textSize="@dimen/_10sdp"
-
-        />
-</LinearLayout>
-
-    <View
+    <LinearLayout
+        android:id="@+id/choose_period_length"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_margin="@dimen/_5sdp"
-        android:background="@color/tab_indicator_gray"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:weightSum="4">
 
-        />
+        <Button
+            android:id="@+id/btn_period_cancel"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_save_and_cancel"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_10sdp" />
+
+        <NumberPicker
+            android:id="@+id/picker_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_weight="3"
+
+            />
+
+        <Button
+            android:id="@+id/btn_period_save"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btn_save_and_cancel"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_10sdp"
+
+            />
+    </LinearLayout>
 
 
     <LinearLayout
@@ -157,13 +159,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4">
 
         <ImageView
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
             android:layout_weight="0.5"
             android:src="@drawable/ic_cycle" />
 
@@ -183,60 +186,55 @@
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
         android:id="@+id/choose_cycle_length"
-        android:padding="@dimen/_10sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="4"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone"
+        android:weightSum="4">
+
         <Button
             android:id="@+id/btn_cycle_cancel"
-            android:background="@drawable/btn_save_and_cancel"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_weight="0.5"
+            android:background="@drawable/btn_save_and_cancel"
             android:text="Cancel"
-            android:textSize="@dimen/_10sdp"
-            android:layout_width="@dimen/_50sdp"
             android:textAllCaps="false"
-            android:layout_height="@dimen/_30sdp"
-            />
+            android:textSize="@dimen/_10sdp" />
+
         <NumberPicker
-            android:layout_weight="3"
             android:id="@+id/picker_cycle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text"
+            android:layout_weight="3"
 
             />
+
         <Button
             android:id="@+id/btn_cycle_save"
-            android:layout_weight="0.5"
-            android:textAllCaps="false"
-            android:text="Save"
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="0.5"
             android:background="@drawable/btn_save_and_cancel"
+            android:text="Save"
+            android:textAllCaps="false"
             android:textSize="@dimen/_10sdp"
 
             />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_margin="@dimen/_5sdp"
-        android:background="@color/tab_indicator_gray"
-
-        />
 
     <LinearLayout
-        android:id="@+id/setting_notifi"
-
+        android:id="@+id/choose_pregnancy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="4">
@@ -245,22 +243,19 @@
             android:layout_width="@dimen/_25sdp"
             android:layout_height="@dimen/_25sdp"
             android:layout_weight="0.5"
-            android:src="@drawable/ic_more_reminder" />
+            android:src="@drawable/ic_pregnant" />
 
         <TextView
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_weight="2.5"
-            android:text="Reminders" />
+            android:text="Pregnancy " />
 
-
-        <ImageView
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:layout_gravity="center"
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_next_page" />
+            android:paddingRight="@dimen/_10sdp" />
     </LinearLayout>
 
     <View
@@ -270,5 +265,178 @@
         android:background="@color/tab_indicator_gray"
 
         />
+
+
+    <LinearLayout
+        android:id="@+id/foot_to_eat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/_ic_food" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Food to eat " />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_tips" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Tips " />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/setting_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_pass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Password " />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@color/tab_indicator_gray"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/rate_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_vote" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Rate us on Google Play" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_feedback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Feedback " />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:text="Share with friends " />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

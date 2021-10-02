@@ -7,4 +7,33 @@
     <string name="forward"><![CDATA[->]]></string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="dot">\u25CF</string>
+    <!--    tips-->
+    <string name="tip_1">What is ovulation ?</string>
+    <string name="tip_2">What is menstruation ?</string>
+    <string name="tip_3">What is menstrual cycle ?</string>
+    <string name="tip_4">How to calculate menstrual cycle length ?</string>
+    <string name="tip_5">What is pregnancy ?</string>
+    <string name="tip_6">How to get pregnant ?</string>
+    <string name="tip_7">When is a period late ?</string>
+    <string name="tip_8">When is a fertile window?</string>
+    <string name="tip_9">What are the symptoms of menstruation ?</string>
+    <string name="tip_10">What is PMS ?</string>
+    <string name="tip_11">What is irregular menstrual cycle ?</string>
+    <string name="tip_12">What are the reason for a late period ?</string>
+    <string name="tip_13">What is the average length of menstrual cycle ?</string>
+    <string name="content_tip_1">Ovulation is the process in which a mature egg is released from the ovary. Those six days are important because the egg is able to be fertilized for about 12 to 24 hours after it is released.</string>
+    <string name="content_tip_2">The process in a woman of discharging blood and other materials from the lining of the uterus at intervals of about one lunar month from puberty until menopause, except during pregnancy.</string>
+    <string name="content_tip_3">The menstrual cycle is a series of natural changes in hormone production and the structures of the uterus and ovaries of the female reproductive system that make pregnancy possible. The ovarian cycle controls the production and release of eggs and the cyclic release of estrogen and progesterone.</string>
+    <string name="content_tip_4">The length of your menstrual cycle is the number of days from the first day of bleeding in your last period, to the first day of bleeding in your next.</string>
+    <string name="content_tip_5">Pregnancy is the term used to describe the period in which a fetus develops inside a woman of womb or uterus. Pregnancy usually lasts about 40 weeks, or just over 9 months, as measured from the last menstrual period to delivery.</string>
+    <string name="content_tip_6">1. Record menstrual cycle frequency\n2. Monitor ovulation \n 3. Have sex every other day during thIf you dont have any known condition affecting your me fertile window\n4. Strive for a healthy body weight\n 5.Take a vitamin \n6. Eat healthy foods\n7. Cut back on STRENUOUS WORKOUTS\n 8. BE AWARE OF AGE-RELATED FERTILITY DECLINES\n9. KICK THE SMOKING AND DRINKING HABITS\n10. KNOW WHEN TO SEEK HELP</string>
+    <string name="content_tip_7">your period should start within 21 to 35 days of your last period, depending on your normal cycle. Regular periods can vary. If your regular cycle is 28 days and you still have not had your period on day 29, your period is officially considered late.</string>
+    <string name="content_tip_8">Ovulation happens about 14 days before your period starts. If your average menstrual cycle is 28 days, you ovulate around day 14, and your most fertile days are days 12, 13 and 14. If your average menstrual cycle is 35 days ovulation happens around day 21 and your most fertile days are days 19,20 and 21..</string>
+    <string name="content_tip_10">PMS (premenstrual syndrome) is the name for the symptoms women can experience in the weeks before their period. Most women have PMS at some point.</string>
+    <string name="content_tip_11">You have irregular periods if the length of your menstrual cycle (the gap between your periods starting) keeps changing. Your periods may come early or late. The average menstrual cycle lasts 28 days, although it is normal for it to be a bit shorter or longer than this.</string>
+    <string name="content_tip_12">Missed or late periods happen for many reasons other than pregnancy. Common causes can range from hormonal imbalances to serious medical conditions. There are also two times in a woman of life when it is totally normal for her period to be irregular: when it first begins, and when menopause starts.</string>
+    <string name="content_tip_9">Here are some of the normal physical symptoms of menstruation: Tender breasts, Muscle aches, Muscle aches, Headaches, Abdominal cramps, Lower back pain, Low energy, fatigue,  Bloating, fluid retention, Joint pain, Acne, Diarrhea or constipation, Trouble sleeping</string>
+    <string name="content_tip_13">WThe length of the menstrual cycle varies from woman to woman, but the average is to have periods every 28 days. Regular cycles that are longer or shorter than this, from 21 to 40 days, are normal.</string>
+
 </resources>

@@ -67,7 +67,7 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder> {
             }
             if (dayOfMonth.equals(GloabalUtils.selectedDate)) {
                 holder.dayOfMonth.setTextColor(Color.WHITE);
-                holder.dayOfMonth.setBackgroundResource(R.drawable.day_green);
+                holder.dayOfMonth.setBackgroundResource(R.drawable.day_greenn);
 
 
             } else if (dayItem.getStatus() == DayItem.RED) {

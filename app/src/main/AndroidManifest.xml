@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCalendar">
-        <activity android:name=".activity.NoteDetailActivity"></activity>
+        <activity android:name=".activity.TipsActivity"></activity>
+        <activity android:name=".activity.SettingPassActivity" />
+        <activity android:name=".activity.NoteDetailActivity" />
         <activity android:name=".activity.SymptomActivity" />
         <activity android:name=".activity.HomeActivity" />
         <activity android:name=".activity.LoginActivity" />

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="pixel_3_xl" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d2524665-634d-41ea-b0c8-5051e0fbcbc2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/activity/SettingPassActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/_ic_food.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_feedback.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_fingerprint.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_mc_end.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_mc_start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_ovulation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pass_lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_pregnant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_share.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_vote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/vip_top_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_pass.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/adapter/CalendarAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/adapter/CalendarAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/adapter/CalendarViewHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/adapter/CalendarViewHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/MenstrualDiaryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/MenstrualDiaryFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/NotificationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/NotificationFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/SettingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/poly/mycalendar/fragment/features/SettingFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_set_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_set_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notification.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notification.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_setting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_calendar_cell.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_calendar_cell.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[K7454PAIYDA6R8JV]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1yUuxIyVPjjNg60mk7PtbNcJAH2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="K7454PAIYDA6R8JV" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-10-02T02:18:11.841Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowEvent Log.ShowToolbar" value="false" />
+    <property name="android-custom-viewC:/Users/truon/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.3.1/45a346a05e7ff27a01c59452379c5939cbb53c03/appcompat-1.3.1-sources.jar!/androidx/appcompat/widget/Toolbar.java_SELECTED" value="Toolbar" />
+    <property name="android-custom-viewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.archit.calendar/awesome-calendar/2.0.0/f872b469635026db0e08dfae5bd6850422bcea31/awesome-calendar-2.0.0-sources.jar!/com/archit/calendardaterangepicker/customviews/DateRangeCalendarView.kt_SELECTED" value="DateRangeCalendarView" />
+    <property name="android-custom-viewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.github.applikeysolutions/cosmocalendar/1.0.4/18e465e7c337b66b8a40aa99679d562df922da4a/cosmocalendar-1.0.4-sources.jar!/com/applikeysolutions/cosmocalendar/view/CalendarView.java_SELECTED" value="CalendarView" />
+    <property name="android-custom-viewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.savvi.datepicker/rangepicker/1.3.0/33b3d8df3e7d3dd38c2ed0f3e7a71ce3496f9e70/rangepicker-1.3.0-sources.jar!/com/savvi/rangedatepicker/CalendarPickerView.java_SELECTED" value="CalendarPickerView" />
+    <property name="android-custom-viewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/widget/CalendarView.java_SELECTED" value="CalendarView" />
+    <property name="android-custom-viewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/widget/NumberPicker.java_SELECTED" value="NumberPicker" />
+    <property name="android-custom-viewE:/redmi/track_menstrual_cycle/app/src/main/java/com/poly/mycalendar/utils/CustomView.java_SELECTED" value="CustomView" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../create_pin_screen/LolliPin" />
+    <property name="multi-representation-previewC:/Users/truon/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.3.1/45a346a05e7ff27a01c59452379c5939cbb53c03/appcompat-1.3.1-sources.jar!/androidx/appcompat/widget/Toolbar.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.archit.calendar/awesome-calendar/2.0.0/f872b469635026db0e08dfae5bd6850422bcea31/awesome-calendar-2.0.0-sources.jar!/com/archit/calendardaterangepicker/customviews/DateRangeCalendarView.kt_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.github.applikeysolutions/cosmocalendar/1.0.4/18e465e7c337b66b8a40aa99679d562df922da4a/cosmocalendar-1.0.4-sources.jar!/com/applikeysolutions/cosmocalendar/view/CalendarView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/.gradle/caches/modules-2/files-2.1/com.savvi.datepicker/rangepicker/1.3.0/33b3d8df3e7d3dd38c2ed0f3e7a71ce3496f9e70/rangepicker-1.3.0-sources.jar!/com/savvi/rangedatepicker/CalendarPickerView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/view/View.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/widget/CalendarView.java_selected" value="Custom views" />
+    <property name="multi-representation-previewC:/Users/truon/AppData/Local/Android/Sdk/sources/android-30/android/widget/NumberPicker.java_selected" value="Custom views" />
+    <property name="multi-representation-previewE:/redmi/track_menstrual_cycle/app/src/main/java/com/poly/mycalendar/utils/CustomView.java_selected" value="Custom views" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.-1902053559">
+      <recent name="com.poly.mycalendar.activity" />
+    </key>
+    <key name="android.template.968860327">
+      <recent name="com.poly.mycalendar.activity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\drawable" />
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\layout" />
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\drawable-xxhdpi" />
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\drawable-mdpi" />
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\drawable-hdpi" />
+    </key>
+    <key name="android.template.1665688723">
+      <recent name="com.poly.mycalendar.activity" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\redmi\track_menstrual_cycle\app\src\main\res\drawable-xxhdpi" />
+    </key>
+    <key name="android.template.-1736333594">
+      <recent name="com.poly.mycalendar.activity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.poly.mycalendar.adapter" />
+      <recent name="com.poly.mycalendar.model" />
+      <recent name="com.poly.mycalendar" />
+    </key>
+    <key name="android.template.-1012154496">
+      <recent name="com.poly.mycalendar.activity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="MyCalendar.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="drawable-mdpi.* and 7 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyCalendar.app" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="drawable-mdpi.*" />
+        <pattern testClass="drawable-hdpi.*" />
+        <pattern testClass="drawable-xxhdpi.*" />
+        <pattern testClass="drawable-xhdpi.*" />
+        <pattern testClass="drawable.*" />
+        <pattern testClass="drawable-v24.*" />
+        <pattern testClass="drawable-anydpi-v24.*" />
+        <pattern testClass="drawable-anydpi.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2524665-634d-41ea-b0c8-5051e0fbcbc2" name="Default Changelist" comment="" />
+      <created>1632318732725</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632318732725</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="142" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1632789130668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="142" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1632789130668" />
+    <state x="752" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1633145101309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="752" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1633145101309" />
+    <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1632986477611">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="219" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1632986477611" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633137196511">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1633137196511" />
+    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1632932815611">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1632932815611" />
+    <state x="430" y="198" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1632930169181">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="430" y="198" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1632930169181" />
+    <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog" timestamp="1632451275399">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1632451275399" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1633003491737">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1633003491737" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1633143039074">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1633143039074" />
+    <state width="1322" height="381" key="GridCell.Tab.0.bottom" timestamp="1633082743891">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="381" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1633082743891" />
+    <state width="1322" height="381" key="GridCell.Tab.0.center" timestamp="1633082743890">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="381" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1633082743890" />
+    <state width="1322" height="381" key="GridCell.Tab.0.left" timestamp="1633082743890">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="381" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1633082743890" />
+    <state width="1322" height="381" key="GridCell.Tab.0.right" timestamp="1633082743890">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="381" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1633082743890" />
+    <state width="1304" height="260" key="GridCell.Tab.1.bottom" timestamp="1633011365631">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1304" height="260" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1633011365631" />
+    <state width="1304" height="260" key="GridCell.Tab.1.center" timestamp="1633011365631">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1304" height="260" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1633011365631" />
+    <state width="1304" height="260" key="GridCell.Tab.1.left" timestamp="1633011365631">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1304" height="260" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1633011365631" />
+    <state width="1304" height="260" key="GridCell.Tab.1.right" timestamp="1633011365631">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1304" height="260" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1633011365631" />
+    <state x="456" y="66" key="RollbackChangesDialog" timestamp="1632815492860">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="456" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1632815492860" />
+    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1633142390604">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1633142390604" />
+    <state x="389" y="111" key="refactoring.ChangeSignatureDialog" timestamp="1633145106007">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1633145106007" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1632962037677">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1632962037677" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1632963327017">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1632963327017" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="startMonth" />
+        <watch expression="list.get(9)" />
+        <watch expression="((CalendarAdapter)this).list" custom="com.poly.mycalendar.adapter.CalendarAdapter" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
